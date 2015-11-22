@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ContinuousStructure CoordSystem="0">
+  <Properties>
+    <Excitation Name="excitation" Type="0" Excite="0,1,0">
+      <Primitives>
+        <Box Priority="0">
+          <P1 X="-10" Y="-10" Z="0">
+          </P1>
+          <P2 X="10" Y="10" Z="0">
+          </P2>
+        </Box>
+      </Primitives>
+    </Excitation>
+    <DumpBox Name="Et" DumpMode="1">
+      <Primitives>
+        <Box Priority="0">
+          <P1 X="-10" Y="0" Z="-10">
+          </P1>
+          <P2 X="10" Y="0" Z="30">
+          </P2>
+        </Box>
+      </Primitives>
+    </DumpBox>
+  </Properties>
+  <RectilinearGrid DeltaUnit="1" CoordSystem="0">
+    <XLines>-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10</XLines>
+    <YLines>-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10</YLines>
+    <ZLines>-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30</ZLines>
+  </RectilinearGrid>
+</ContinuousStructure>
