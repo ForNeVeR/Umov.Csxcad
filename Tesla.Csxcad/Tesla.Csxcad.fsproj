@@ -50,10 +50,13 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <Content Include="packages.config" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Reader.fs" />
-    <Content Include="packages.config" />
     <Compile Include="Geometry.fs" />
+    <Compile Include="Primitives.fs" />
+    <Compile Include="Properties.fs" />
+    <Compile Include="Base.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">

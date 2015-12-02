@@ -1,4 +1,4 @@
-﻿namespace Tesla.Models.AssemblyInfo
+﻿namespace Tesla.Csxcad.AssemblyInfo
 
 open System.Reflection
 open System.Runtime.InteropServices
