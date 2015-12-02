@@ -1,15 +1,13 @@
-﻿module Tesla.Models.Reader
+﻿module Tesla.Csxcad.Reader
 
 open System
 open System.IO
 
 open FSharp.Data
 
-open Tesla.Triple.Geometry
-open Tesla.Triple.Sources
-open Tesla.Triple.Experiments
+open Tesla.Csxcad.Geometry
 
-type CSXCAD = XmlProvider<".\Tools\CSX.xml", InferTypesFromValues = false>
+type CSXCAD = XmlProvider<"..\Tools\CSX.xml", InferTypesFromValues = false>
 
 let private excitationType =
     function

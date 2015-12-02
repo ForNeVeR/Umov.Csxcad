@@ -7,12 +7,12 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7dec457d-1fc6-475b-adc0-6382e8558306</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Tesla.Models</RootNamespace>
-    <AssemblyName>Tesla.Models</AssemblyName>
+    <RootNamespace>Tesla.Csxcad</RootNamespace>
+    <AssemblyName>Tesla.Csxcad</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>Tesla.Models</Name>
+    <Name>Tesla.Csxcad</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +22,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\Tesla.Models.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Tesla.Csxcad.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\Tesla.Models.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Tesla.Csxcad.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -50,12 +50,10 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <None Include="Readme.md" />
     <Compile Include="AssemblyInfo.fs" />
-    <None Include="Tools\Generate-CSX.m" />
-    <Content Include="Tools\CSX.xml" />
     <Compile Include="Reader.fs" />
     <Content Include="packages.config" />
+    <Compile Include="Geometry.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">
@@ -78,7 +76,7 @@
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
