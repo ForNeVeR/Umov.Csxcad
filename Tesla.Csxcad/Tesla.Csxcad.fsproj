@@ -52,8 +52,8 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Reader.fs" />
     <Compile Include="Geometry.fs" />
+    <Compile Include="Reader.fs" />
     <Compile Include="Primitives.fs" />
     <Compile Include="Properties.fs" />
     <Compile Include="Base.fs" />
