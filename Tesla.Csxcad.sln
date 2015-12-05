@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{B35EE3B7-79A6-4839-98B9-B4E5C71295BF}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tesla.Csxcad", "Tesla.Csxcad\Tesla.Csxcad.fsproj", "{7DEC457D-1FC6-475B-ADC0-6382E8558306}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{011A77A9-9930-45D6-812D-5637E61E5FB1}"
@@ -21,6 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BE7E6A13
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tesla.Csxcad.Tests", "Tesla.Csxcad.Tests\Tesla.Csxcad.Tests.fsproj", "{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{01D302B1-2B34-4D70-B39D-45294237FC4D}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Bootstrap.ps1 = Scripts\Bootstrap.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +52,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BE7E6A13-D2F4-4BE8-BA47-37B2C64403C8} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
+		{01D302B1-2B34-4D70-B39D-45294237FC4D} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
 	EndGlobalSection
 EndGlobal
