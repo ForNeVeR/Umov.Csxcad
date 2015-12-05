@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BE7E6A13
 		Tools\Generate-CSX.m = Tools\Generate-CSX.m
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tesla.Csxcad.Tests", "Tesla.Csxcad.Tests\Tesla.Csxcad.Tests.fsproj", "{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{7DEC457D-1FC6-475B-ADC0-6382E8558306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DEC457D-1FC6-475B-ADC0-6382E8558306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DEC457D-1FC6-475B-ADC0-6382E8558306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

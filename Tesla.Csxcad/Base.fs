@@ -2,7 +2,7 @@
 
 open Tesla.Csxcad.Properties
 
-type RectlinearGrid = {
+type RectilinearGrid = {
     Delta : double
     XLines : double seq
     YLines : double seq
@@ -11,5 +11,5 @@ type RectlinearGrid = {
 
 type ContinuousStructure = {
     Properties : Property seq
-    Grid : RectlinearGrid
+    Grid : RectilinearGrid
 }

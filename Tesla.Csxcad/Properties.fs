@@ -41,7 +41,6 @@ type Excitation(name : string,
     member __.Type = ``type``
     member __.Vector = vector
     
-
 type DumpBox(name : string,
              zone : Primitive seq,
              dumpType : DumpType,
