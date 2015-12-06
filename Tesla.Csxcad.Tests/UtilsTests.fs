@@ -16,7 +16,7 @@ let ``Utils.parseEnum should parse enums properly``() =
 [<Fact>]
 let ``Utils.parseEnum should throw exception for unknown enum member``() =
     let value = "777"
-    let action = Action (fun () ->             
+    let action = Action (fun () ->
                              let value : DumpType = Utils.parseEnum value
                              ())
 
