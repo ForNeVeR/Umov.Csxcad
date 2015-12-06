@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
 		MIT.md = MIT.md
 		Readme.md = Readme.md
 		WTFPL.md = WTFPL.md
@@ -26,11 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BE7E6A13
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tesla.Csxcad.Tests", "Tesla.Csxcad.Tests\Tesla.Csxcad.Tests.fsproj", "{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{01D302B1-2B34-4D70-B39D-45294237FC4D}"
-	ProjectSection(SolutionItems) = preProject
-		Scripts\Bootstrap.ps1 = Scripts\Bootstrap.ps1
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +48,5 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BE7E6A13-D2F4-4BE8-BA47-37B2C64403C8} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
-		{01D302B1-2B34-4D70-B39D-45294237FC4D} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
 	EndGlobalSection
 EndGlobal
