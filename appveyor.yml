@@ -1,3 +1,2 @@
 before_build:
-- ps: ./.paket/paket.bootstrapper.exe
-- ps: ./.paket/paket.exe install
+- ps: ./Scripts/Install.ps1

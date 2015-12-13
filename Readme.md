@@ -7,12 +7,17 @@ creating [CSXCAD][csxcad] files.
 Build
 -----
 
-This project uses [Paket][paket] dependency manager. Before building the
-project, you should download the dependencies. To install Paket and download the
-dependencies, execute the following commands before opening the solution file:
+This project uses [Paket][paket] dependency manager. Before opening the solution
+or building the project, you should install Paket (or Paket bootstrapper) into
+`.paket` directory and download the dependencies using the following commands:
 
     $ ./.paket/paket.bootstrapper.exe
     $ ./.paket/paket.exe install
+
+For convenience, there is a script `Scripts/Install.ps1` that will download
+Paket bootstrapper and call these commands automatically.
+
+Consult the script documentation to discover its parameters.
 
 CSX file generation
 -------------------
