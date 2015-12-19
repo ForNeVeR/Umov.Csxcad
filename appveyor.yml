@@ -1,2 +1,5 @@
 before_build:
 - ps: ./Scripts/Install.ps1
+
+after_build:
+- ps: ./Scripts/Package.ps1

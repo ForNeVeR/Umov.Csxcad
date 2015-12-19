@@ -27,6 +27,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1F17EABE-71A6-4050-A4F9-2EBC2A4921DA}"
 	ProjectSection(SolutionItems) = preProject
 		Scripts\Install.ps1 = Scripts\Install.ps1
+		Scripts\Package.ps1 = Scripts\Package.ps1
+		Scripts\Push-Package.ps1 = Scripts\Push-Package.ps1
 	EndProjectSection
 EndProject
 Global

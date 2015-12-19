@@ -1,4 +1,4 @@
-Tesla.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Umbra][status-umbra]][andivionian-status-classifier]
+Tesla.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Umbra][status-umbra]][andivionian-status-classifier] [![Nuget Package][nuget-badge]][nuget-tesla-csxcad]
 ============
 
 This is a part of the [Tesla project][tesla] responsible for parsing and
@@ -18,6 +18,13 @@ For convenience, there is a script `Scripts/Install.ps1` that will download
 Paket bootstrapper and call these commands automatically.
 
 Consult the script documentation to discover its parameters.
+
+Packaging
+---------
+
+To build [Nuget][nuget] package for Tesla, use the script `Scripts/Package.ps1`.
+If you want to push this package to the Nuget feed, use
+`Scripts/Push-Package.ps1`.
 
 CSX file generation
 -------------------
@@ -43,10 +50,13 @@ This software may be at the user's choice used under the terms of:
 [andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier
 [appveyor-build]: https://ci.appveyor.com/project/ForNeVeR/tesla-csxcad/branch/develop
 [csxcad]: https://github.com/thliebig/CSXCAD
+[nuget]: https://www.nuget.org/
+[nuget-tesla-csxcad]: https://www.nuget.org/packages/Tesla.Csxcad/
 [paket]: https://fsprojects.github.io/Paket/index.html
 [tesla]: https://github.com/ForNeVeR/Tesla
 [wtfpl]: http://www.wtfpl.net/
 
 [appveyor-build-status]: https://ci.appveyor.com/api/projects/status/hg2hjvmhwmiwf7q9/branch/develop?svg=true
+[nuget-badge]: https://img.shields.io/nuget/vpre/Tesla.Csxcad.svg
 [status-umbra]: https://img.shields.io/badge/status-umbra-red.svg
 [wtfpl-badge]: http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png

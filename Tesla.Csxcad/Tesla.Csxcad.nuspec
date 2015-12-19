@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Tesla.Csxcad</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Friedrich von Never</authors>
+    <owners>Friedrich von Never</owners>
+    <licenseUrl>https://github.com/ForNeVeR/Tesla#licensing</licenseUrl>
+    <projectUrl>https://github.com/ForNeVeR/Tesla</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library to reading and write CXSCAD files.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright © 2015 Friedrich von Never friedrich@fornever.me</copyright>
+    <tags>CSXCAD XML</tags>
+    <dependencies>
+        <dependency id="FSharp.Data" version="2.2.5" />
+    </dependencies>
+  </metadata>
+</package>

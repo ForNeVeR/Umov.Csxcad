@@ -3,11 +3,12 @@
 open System.Reflection
 open System.Runtime.InteropServices
 
-[<assembly: AssemblyTitle("Tesla.Models")>]
+[<assembly: AssemblyTitle("Tesla.Csxcad")>]
 [<assembly: AssemblyProduct("Tesla")>]
 [<assembly: AssemblyCopyright("Copyright © F. von Never 2015")>]
 [<assembly: ComVisible(false)>]
 [<assembly: Guid("7dec457d-1fc6-475b-adc0-6382e8558306")>]
+[<assembly: AssemblyInformationalVersion("0.0.1-alpha2")>]
 [<assembly: AssemblyVersion("0.0.1.0")>]
 
 ()
