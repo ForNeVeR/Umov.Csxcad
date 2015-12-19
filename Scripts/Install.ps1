@@ -35,6 +35,6 @@ if (-not (Test-Path $paket)) {
 }
 
 Write-Output "Running paket install"
-& $paket install
+& $paket restore
 
 exit -not $?

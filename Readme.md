@@ -12,7 +12,7 @@ or building the project, you should install Paket (or Paket bootstrapper) into
 `.paket` directory and download the dependencies using the following commands:
 
     $ ./.paket/paket.bootstrapper.exe
-    $ ./.paket/paket.exe install
+    $ ./.paket/paket.exe restore
 
 For convenience, there is a script `Scripts/Install.ps1` that will download
 Paket bootstrapper and call these commands automatically.
