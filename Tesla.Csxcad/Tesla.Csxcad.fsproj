@@ -68,7 +68,7 @@
     </When>
   </Choose>
   <ItemGroup>
-    <Content Include="paket.references" />
+    <None Include="paket.references" />
     <None Include="Tesla.Csxcad.nuspec" />
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Geometry.fs" />
