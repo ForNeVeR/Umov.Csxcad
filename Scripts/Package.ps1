@@ -5,7 +5,7 @@
     Path to the MSBuild executable.
 .PARAMETER nuget
     Path to the Nuget executable.
-.PARAMETER Solution 
+.PARAMETER Solution
     Path to the solution that will be built.
 .PARAMETER Project
     Path to the main project that will be packed.
@@ -20,7 +20,7 @@ param (
     $Configuration = "Release"
 )
 
-& $msbuild $Solution  /m "/p:Configuration=$Configuration" /p:Platform="Any CPU"
+& $msbuild $Solution /m "/p:Configuration=$Configuration" /p:Platform="Any CPU"
 if (-not $?) {
     exit $LASTEXITCODE
 }
@@ -30,5 +30,6 @@ if (-not $?) {
     $Project `
     -IncludeReferencedProjects `
     -Prop "Configuration=$Configuration"
+    -Prop "OutDir=bin\$Configuration"
 
 exit $LASTEXITCODE
