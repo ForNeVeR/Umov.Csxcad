@@ -31,7 +31,7 @@ if (-not $?) {
     pack `
     $Project `
     -IncludeReferencedProjects `
-    -Prop "Configuration=$Configuration"
+    -Prop "Configuration=$Configuration" `
     -Prop "OutDir=bin\$Configuration"
 
 exit $LASTEXITCODE
