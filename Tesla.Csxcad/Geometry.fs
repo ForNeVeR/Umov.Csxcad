@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.Geometry
+﻿namespace Tesla.Csxcad.Geometry
 
 type Point = {
     X : double

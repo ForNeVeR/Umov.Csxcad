@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.Base
+﻿namespace Tesla.Csxcad.Base
 
 open Tesla.Csxcad.Properties
 

@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.Primitives
+﻿namespace Tesla.Csxcad.Primitives
 
 open Tesla.Csxcad.Geometry
 
