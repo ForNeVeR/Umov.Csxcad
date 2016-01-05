@@ -20,6 +20,8 @@ param (
     $Configuration = "Release"
 )
 
+$ErrorActionPreference = 'Stop'
+
 & $msbuild $Solution /m "/p:Configuration=$Configuration" /p:Platform="Any CPU"
 if (-not $?) {
     exit $LASTEXITCODE
