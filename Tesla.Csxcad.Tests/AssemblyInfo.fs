@@ -5,10 +5,10 @@ open System.Runtime.InteropServices
 
 [<assembly: AssemblyTitle("Tesla.Csxcad")>]
 [<assembly: AssemblyProduct("Tesla")>]
-[<assembly: AssemblyCopyright("Copyright © F. von Never 2015")>]
+[<assembly: AssemblyCopyright("Copyright © F. von Never 2015-2016")>]
 [<assembly: ComVisible(false)>]
 [<assembly: Guid("2272a8fe-8d64-4e14-8b93-2a7c9ab309cf")>]
-[<assembly: AssemblyInformationalVersion("0.0.1-alpha2")>]
+[<assembly: AssemblyInformationalVersion("0.0.1-alpha3")>]
 [<assembly: AssemblyVersion("0.0.1.0")>]
 
 ()
