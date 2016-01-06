@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Library to reading and write CXSCAD files.</description>
     <releaseNotes>Initial release.</releaseNotes>
-    <copyright>Copyright © 2015 Friedrich von Never friedrich@fornever.me</copyright>
+    <copyright>Copyright © 2015-2016 Friedrich von Never friedrich@fornever.me</copyright>
     <tags>CSXCAD XML</tags>
     <dependencies>
         <dependency id="FSharp.Data" version="2.2.5" />
