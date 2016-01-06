@@ -76,7 +76,7 @@
     <Compile Include="Properties.fs" />
     <Compile Include="Base.fs" />
     <Compile Include="Utils.fs" />
-    <Compile Include="Reader.fs" />
+    <Compile Include="CsxReader.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

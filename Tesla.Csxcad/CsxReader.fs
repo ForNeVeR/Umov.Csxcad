@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.Reader
+﻿module Tesla.Csxcad.CsxReader
 
 open System.IO
 
@@ -87,6 +87,6 @@ let private processContinousStructure (structure : CSXCAD.ContinuousStructure) =
         Grid = processRectilinearGrid structure.RectilinearGrid
     }
 
-let read (stream : Stream) : ContinuousStructure =
+let Parse (stream : Stream) : ContinuousStructure =
     let structure = CSXCAD.Load stream
     processContinousStructure structure
