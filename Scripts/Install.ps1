@@ -1,4 +1,4 @@
-<# 
+<#
 .SYNOPSIS
     Installs the dependencies for EmfPlatform build.
 .PARAMETER Directory
@@ -8,8 +8,10 @@
 #>
 param (
     [string] $Directory = "$PSScriptRoot/../.paket",
-    [string] $PaketVersion = "2.36.1"
+    [string] $PaketVersion = "2.40.11"
 )
+
+$ErrorActionPreference = 'Stop'
 
 $url = "https://github.com/fsprojects/Paket/releases/download/$PaketVersion/paket.bootstrapper.exe"
 
@@ -34,7 +36,7 @@ if (-not (Test-Path $paket)) {
     & $bootstrapper
 }
 
-Write-Output "Running paket install"
+Write-Output "Running paket restore"
 & $paket restore
 
 exit -not $?
