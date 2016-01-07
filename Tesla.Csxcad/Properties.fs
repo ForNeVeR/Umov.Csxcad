@@ -3,7 +3,7 @@
 open Tesla.Csxcad.Geometry
 open Tesla.Csxcad.Primitives
 
-type ExcitationType = 
+type ExcitationType =
       SoftE = 0
     | HardE = 1
     | SoftH = 2
@@ -29,20 +29,20 @@ type DumpMode =
     | NodeInterpolation = 1
     | CellInterpolation = 2
 
-type Property(name : string, zone : Primitive seq) =
+type Property(name : string, zone : Primitive array) =
     member __.Name = name
     member __.Zone = zone
 
 type Excitation(name : string,
-                zone : Primitive seq,
+                zone : Primitive array,
                 ``type`` : ExcitationType,
                 vector : Vector) =
     inherit Property(name, zone)
     member __.Type = ``type``
     member __.Vector = vector
-    
+
 type DumpBox(name : string,
-             zone : Primitive seq,
+             zone : Primitive array,
              dumpType : DumpType,
              dumpMode : DumpMode) =
     inherit Property(name, zone)
@@ -50,5 +50,5 @@ type DumpBox(name : string,
     member __.DumpMode = dumpMode
 
 type Metal(name : string,
-           zone : Primitive seq) =
+           zone : Primitive array) =
     inherit Property(name, zone)

@@ -28,8 +28,9 @@ let private processP2 (p2 : CSXCAD.P2) : Point =
 let private processBox (box : CSXCAD.Box) =
     Box (int box.Priority, processP1 box.P, processP2 box.P2)
 
-let private processPrimitives (primitives : CSXCAD.Primitives) : Primitive seq =
-    Seq.map (fun b -> upcast processBox b) primitives.Boxes
+let private processPrimitives (primitives : CSXCAD.Primitives)
+                              : Primitive array =
+    Array.map (fun b -> upcast processBox b) primitives.Boxes
 
 let private processDumpType (dumpBox : CSXCAD.DumpBox) =
     DumpType.EFieldTimeDomain // TODO: Parse dump type.
