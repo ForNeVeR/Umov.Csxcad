@@ -68,11 +68,11 @@ let private processProperties (properties : CSXCAD.Properties) =
         Seq.singleton <| processDumpBox properties.DumpBox
         Seq.singleton <| processExcitation properties.Excitation
         Seq.map processMetal properties.Metals
-    ]
+    ] |> Seq.toArray
 
 let private processGridLines (lines : string) =
     lines.Split ','
-    |> Seq.map double
+    |> Array.map double
 
 let private processRectilinearGrid (grid : CSXCAD.RectilinearGrid) =
     {
