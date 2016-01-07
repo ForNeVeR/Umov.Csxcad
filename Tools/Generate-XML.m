@@ -1,3 +1,22 @@
+function copyWithoutHeader(sourceName, targetName, targetMode)
+    input = fopen(sourceName);
+    output = fopen(targetName, targetMode);
+    line = fgetl(input);
+    while (line != -1)
+        line = fgetl(input);
+        if (line != -1)
+            fputs(output, strcat(line, "\n"));
+        endif
+    end
+    fclose(input);
+    fclose(output);
+end
+
+function concatXML (name1, name2, output)
+    copyWithoutHeader(name1, output, 'w');
+    copyWithoutHeader(name2, output, 'a');
+end
+
 CSX = InitCSX();
 
 mesh.x = -10:10;
@@ -25,3 +44,5 @@ FDTD = SetSinusExcite(FDTD, 10e6);
 FDTD = SetBoundaryCond(FDTD, {'PMC' 'PMC' 'PEC' 'PEC' 'MUR' 'MUR'});
 
 WriteOpenEMS('./openEMS.xml', FDTD, CSX);
+
+concatXML('./CSX.xml', './openEMS.xml', './Sample.lxml');

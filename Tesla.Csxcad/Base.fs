@@ -11,3 +11,6 @@ type RectilinearGrid =
 type ContinuousStructure =
     { Properties : Property array
       Grid : RectilinearGrid }
+
+type OpenEms =
+    { ContinousStructure : ContinuousStructure } // TODO: Add FDTD field
