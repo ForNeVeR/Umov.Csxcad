@@ -2,6 +2,23 @@
 
 open Tesla.Csxcad.Properties
 
+type ExcitationModeType =
+    | Gauss = 0
+    | Sine = 1
+    | Dirac = 2
+    | Step = 3
+    | Custom = 10
+
+type BoundaryConditionType =
+    /// Perfect electrical conductor.
+    | Pec
+    /// Perfect magnetic conductor.
+    | Pmc
+    /// Mur absorbing boundary conditions.
+    | MurAbc
+    /// Perfectly matched layers absorbing boundary conditions.
+    | PmlAbc of PmlSize : uint32
+
 type RectilinearGrid =
     { Delta : double
       XLines : double array
@@ -12,5 +29,34 @@ type ContinuousStructure =
     { Properties : Property array
       Grid : RectilinearGrid }
 
+type ExcitationMode =
+    { Type : ExcitationModeType
+
+      /// Nyquist rate for custom excitation mode, center frequency for Gauss
+      /// excitation, frequency for sine excitation. Not defined otherwise.
+      MainFrequency : double option
+
+      /// For Gauss excitation only. 20 dB cutoff frequency.
+      CutoffFrequency : double option
+
+      /// Custom excitation function definition.
+      ExcitationFunction : string option }
+
+type BoundaryConditions =
+    { XMin : BoundaryConditionType
+      XMax : BoundaryConditionType
+      YMin : BoundaryConditionType
+      YMax : BoundaryConditionType
+      ZMin : BoundaryConditionType
+      ZMax : BoundaryConditionType }
+
+type Fdtd =
+    { NumberOfTimesteps : uint32
+      EndEnergyCriteria : double
+      MaxFrequency : double
+      Excitation : ExcitationMode
+      BoundaryConditions : BoundaryConditions }
+
 type OpenEms =
-    { ContinousStructure : ContinuousStructure } // TODO: Add FDTD field
+    { Fdtd : Fdtd
+      ContinousStructure : ContinuousStructure }

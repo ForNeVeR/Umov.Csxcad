@@ -24,3 +24,14 @@ let ``CsxReader should throw an exception on invalid file`` () =
     Assert.Throws<Exception> (Func<obj> (fun () ->
                                              upcast CsxReader.Parse stream))
 
+[<Fact>]
+let ``OpenEmsReader should read openEMS file`` () =
+    use stream = new FileStream(``openEMS.xml``, FileMode.Open)
+    ignore (OpenEmsReader.Parse stream)
+    ()
+
+[<Fact>]
+let ``OpenEmsReader should throw an exception on invalid file`` () =
+    use stream = new FileStream(``CSX.xml``, FileMode.Open)
+    Assert.Throws<Exception> (Func<obj> (fun () ->
+                                             upcast OpenEmsReader.Parse stream))

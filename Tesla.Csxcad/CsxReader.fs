@@ -76,12 +76,13 @@ let private processRectilinearGrid (grid : Xml.RectilinearGrid) =
       YLines = processGridLines grid.YLines
       ZLines = processGridLines grid.ZLines }
 
-let internal parse (structure : Xml.ContinuousStructure) : ContinuousStructure =
+let internal processContinuousStructure (structure : Xml.ContinuousStructure)
+                                        : ContinuousStructure =
     { Properties = processProperties structure.Properties
       Grid = processRectilinearGrid structure.RectilinearGrid }
 
 let Parse (stream : Stream) : ContinuousStructure =
     let data = Xml.Load stream
     match data.ContinuousStructure with
-    | Some cs -> parse cs
+    | Some cs -> processContinuousStructure cs
     | None -> failwithf "Incompatible XML data"
