@@ -72,13 +72,15 @@ let private processGridLines (lines : string) =
 
 let private processRectilinearGrid (grid : Xml.RectilinearGrid) =
     { Delta = double grid.DeltaUnit
+      CoordinateSystem = Utils.parseEnum grid.CoordSystem
       XLines = processGridLines grid.XLines
       YLines = processGridLines grid.YLines
       ZLines = processGridLines grid.ZLines }
 
 let internal processContinuousStructure (structure : Xml.ContinuousStructure)
                                         : ContinuousStructure =
-    { Properties = processProperties structure.Properties
+    { CoordinateSystem = Utils.parseEnum structure.CoordSystem
+      Properties = processProperties structure.Properties
       Grid = processRectilinearGrid structure.RectilinearGrid }
 
 let Parse (stream : Stream) : ContinuousStructure =

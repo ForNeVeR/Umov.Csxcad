@@ -2,6 +2,10 @@
 
 open System
 
+let inline enumCode (e : 'TEnum) : string =
+    let code = int e
+    string code
+
 let inline parseEnum (s : string) : 'TEnum =
     let value = int s
     let enumType = typeof<'TEnum>
