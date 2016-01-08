@@ -19,7 +19,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BE7E6A13-D2F4-4BE8-BA47-37B2C64403C8}"
 	ProjectSection(SolutionItems) = preProject
 		Tools\CSX.xml = Tools\CSX.xml
-		Tools\Generate-CSX.m = Tools\Generate-CSX.m
+		Tools\Generate-XML.m = Tools\Generate-XML.m
+		Tools\openEMS.xml = Tools\openEMS.xml
+		Tools\Sample.lxml = Tools\Sample.lxml
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tesla.Csxcad.Tests", "Tesla.Csxcad.Tests\Tesla.Csxcad.Tests.fsproj", "{2272A8FE-8D64-4E14-8B93-2A7C9AB309CF}"
