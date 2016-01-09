@@ -11,9 +11,13 @@ let referenceStructure =
     use stream = new FileStream(``CSX.xml``, FileMode.Open, FileAccess.Read)
     CsxReader.Parse stream
 
-let writeReferenceData path =
+let referenceOpenEms =
+    use stream = new FileStream(``openEMS.xml``, FileMode.Open, FileAccess.Read)
+    OpenEmsReader.Parse stream
+
+let writeData path writer data =
     use stream = new FileStream (path, FileMode.Create)
-    CsxWriter.Write (stream, referenceStructure)
+    writer (stream, data)
 
 let assertStructuralEquality<'t> (a : 't) (b : 't) =
     // The closest to structural equality in our situation is this:
@@ -23,14 +27,29 @@ let assertStructuralEquality<'t> (a : 't) (b : 't) =
 [<Fact>]
 let ``CsxWriter should write data successfully`` () =
     let path = Path.GetTempFileName ()
-    writeReferenceData path
+    writeData path CsxWriter.Write referenceStructure
     Assert.NotEqual (0L, FileInfo(path).Length)
 
 [<Fact>]
-let ``CsxReader should be able to read the data written by CsxWriter`` () =
+let ``CsxReader should read the data written by CsxWriter`` () =
     let path = Path.GetTempFileName ()
-    writeReferenceData path
-    use stream = new FileStream(``CSX.xml``, FileMode.Open)
+    writeData path CsxWriter.Write referenceStructure
+    use stream = new FileStream(path, FileMode.Open)
     let dataRead = CsxReader.Parse stream
 
     assertStructuralEquality referenceStructure dataRead
+
+[<Fact>]
+let ``OpenEmsWriter should write data successfully`` () =
+    let path = Path.GetTempFileName ()
+    writeData path OpenEmsWriter.Write referenceOpenEms
+    Assert.NotEqual (0L, FileInfo(path).Length)
+
+[<Fact>]
+let ``OpenEmsReader should read the data written by OpenEmsWriter`` () =
+    let path = Path.GetTempFileName ()
+    writeData path OpenEmsWriter.Write referenceOpenEms
+    use stream = new FileStream(path, FileMode.Open)
+    let dataRead = OpenEmsReader.Parse stream
+
+    assertStructuralEquality referenceOpenEms dataRead

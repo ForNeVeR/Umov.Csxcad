@@ -78,8 +78,9 @@
     <Compile Include="Utils.fs" />
     <Compile Include="Xml.fs" />
     <Compile Include="CsxReader.fs" />
-    <Compile Include="OpenEmsReader.fs" />
     <Compile Include="CsxWriter.fs" />
+    <Compile Include="OpenEmsReader.fs" />
+    <Compile Include="OpenEmsWriter.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
