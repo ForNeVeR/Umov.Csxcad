@@ -5,7 +5,7 @@ open Tesla.Csxcad.Properties
 type CoordinateSystem =
     | Cartesian = 0
     | Cylindrical = 1
-    // Not yet implemented per comment in InitCSX.m.
+    /// Not yet implemented per comment in InitCSX.m.
     | Spherical = 2
 
 type ExcitationModeType =
