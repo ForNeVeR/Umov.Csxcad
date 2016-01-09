@@ -106,6 +106,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="TestData.fs" />
+    <Compile Include="WriterTests.fs" />
     <Compile Include="ReaderTests.fs" />
     <Compile Include="UtilsTests.fs" />
   </ItemGroup>

@@ -2,6 +2,12 @@
 
 open Tesla.Csxcad.Properties
 
+type CoordinateSystem =
+    | Cartesian = 0
+    | Cylindrical = 1
+    /// Not yet implemented per comment in InitCSX.m.
+    | Spherical = 2
+
 type ExcitationModeType =
     | Gauss = 0
     | Sine = 1
@@ -21,12 +27,14 @@ type BoundaryConditionType =
 
 type RectilinearGrid =
     { Delta : double
+      CoordinateSystem : CoordinateSystem
       XLines : double array
       YLines : double array
       ZLines : double array }
 
 type ContinuousStructure =
-    { Properties : Property array
+    { CoordinateSystem : CoordinateSystem
+      Properties : Property array
       Grid : RectilinearGrid }
 
 type ExcitationMode =

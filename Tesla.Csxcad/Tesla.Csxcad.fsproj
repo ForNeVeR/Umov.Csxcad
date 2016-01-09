@@ -78,7 +78,9 @@
     <Compile Include="Utils.fs" />
     <Compile Include="Xml.fs" />
     <Compile Include="CsxReader.fs" />
+    <Compile Include="CsxWriter.fs" />
     <Compile Include="OpenEmsReader.fs" />
+    <Compile Include="OpenEmsWriter.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -87,7 +89,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
 </Project>

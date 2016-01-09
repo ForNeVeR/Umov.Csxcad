@@ -4,8 +4,15 @@ open System
 
 open Xunit
 
-open Tesla.Csxcad.Properties
 open Tesla.Csxcad
+open Tesla.Csxcad.Base
+open Tesla.Csxcad.Properties
+
+[<Fact>]
+let ``Utils.enumCode should return enum value as string`` () =
+    let enumMember = CoordinateSystem.Cartesian
+    let code = Utils.enumCode enumMember
+    Assert.Equal (code, "0")
 
 [<Fact>]
 let ``Utils.parseEnum should parse enums properly`` () =
