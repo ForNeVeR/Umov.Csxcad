@@ -18,8 +18,6 @@ let writeReferenceData path =
 let assertStructuralEquality<'t> (a : 't) (b : 't) =
     // The closest to structural equality in our situation is this:
     let descriptor = sprintf "%A"
-    let d1 = descriptor a
-    let d2 = descriptor b
     Assert.Equal (descriptor a, descriptor b)
 
 [<Fact>]
