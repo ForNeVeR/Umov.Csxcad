@@ -2,6 +2,11 @@
 
 open System
 
+let stringOption = function
+    | "" -> None
+    | null -> None
+    | s -> Some s
+
 let inline enumCode (e : 'TEnum) : string =
     let code = int e
     string code
@@ -14,3 +19,5 @@ let inline parseEnum (s : string) : 'TEnum =
         raise <| ArgumentException (message, "s")
 
     enum value
+
+let inline parseEnumOpt (s : string) = stringOption s |> Option.map parseEnum

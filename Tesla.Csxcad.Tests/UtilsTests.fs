@@ -9,6 +9,12 @@ open Tesla.Csxcad.Base
 open Tesla.Csxcad.Properties
 
 [<Fact>]
+let ``Utils.stringOption should behave properly`` () =
+    Assert.Equal (None, Utils.stringOption "")
+    Assert.Equal (None, Utils.stringOption null)
+    Assert.Equal (Some "s", Utils.stringOption "s")
+
+[<Fact>]
 let ``Utils.enumCode should return enum value as string`` () =
     let enumMember = CoordinateSystem.Cartesian
     let code = Utils.enumCode enumMember
@@ -28,3 +34,7 @@ let ``Utils.parseEnum should throw exception for unknown enum member`` () =
                              ())
 
     Assert.Throws<ArgumentException> action
+
+let ``Utils.parseEnumOpt should return None for empty string`` () =
+    let enum : CoordinateSystem option = Utils.parseEnumOpt ""
+    Assert.Equal (None, enum)

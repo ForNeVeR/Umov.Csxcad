@@ -72,7 +72,7 @@ let private processGridLines (lines : string) =
 
 let private processRectilinearGrid (grid : Xml.RectilinearGrid) =
     { Delta = double grid.DeltaUnit
-      CoordinateSystem = Utils.parseEnum grid.CoordSystem
+      CoordinateSystem = defaultArg (Utils.parseEnumOpt grid.CoordSystem) CoordinateSystem.Cartesian
       XLines = processGridLines grid.XLines
       YLines = processGridLines grid.YLines
       ZLines = processGridLines grid.ZLines }

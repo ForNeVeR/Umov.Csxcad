@@ -1,10 +1,12 @@
 ﻿module Tesla.Csxcad.Tests.TestData
 
-open System
 open System.IO
 
-open Tesla.Csxcad
+let private SolutionRoot = Path.Combine ("..", "..", "..")
 
-let Tools = Path.Combine ("..", "..", "..", "Tools")
+let Tools = Path.Combine (SolutionRoot, "Tools")
 let ``CSX.xml`` = Path.Combine (Tools, "CSX.xml")
 let ``openEMS.xml`` = Path.Combine (Tools, "openEMS.xml")
+
+let ``Test-Data`` = Path.Combine (SolutionRoot, "Test-Data")
+let ``Test-Data/CSX.xml`` = Path.Combine (``Test-Data``, "CSX.xml")

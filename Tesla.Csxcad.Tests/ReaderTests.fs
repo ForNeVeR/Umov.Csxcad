@@ -31,3 +31,9 @@ let ``OpenEmsReader should throw an exception on invalid file`` () =
     use stream = new FileStream(``CSX.xml``, FileMode.Open, FileAccess.Read)
     Assert.Throws<Exception> (Func<obj> (fun () ->
                                              upcast OpenEmsReader.Parse stream))
+
+[<Fact>]
+let ``OpenEmdReader should read Test-Data/CSX.xml successfully`` () =
+    use stream = new FileStream(``Test-Data/CSX.xml``, FileMode.Open, FileAccess.Read)
+    ignore (CsxReader.Parse stream)
+    ()

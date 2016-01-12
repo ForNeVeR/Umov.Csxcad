@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<ContinuousStructure CoordSystem="0">
+    <RectilinearGrid DeltaUnit="1">
+        <XLines Qty="21">-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10</XLines>
+        <YLines Qty="21">-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10</YLines>
+        <ZLines Qty="41">-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30</ZLines>
+    </RectilinearGrid>
+    <BackgroundMaterial Epsilon="1" Mue="1" Kappa="0" Sigma="0" />
+    <ParameterSet />
+    <Properties>
+        <Excitation ID="0" Name="excitation" Number="0" Frequency="0.000000e+000" Delay="0.000000e+000" Type="0" Excite="0.000000e+000,1.000000e+000,0.000000e+000" PropDir="0.000000e+000,0.000000e+000,0.000000e+000">
+            <FillColor R="154" G="149" B="193" a="255" />
+            <EdgeColor R="154" G="149" B="193" a="255" />
+            <Primitives>
+                <Box Priority="0">
+                    <P1 X="-1.000000e+001" Y="-1.000000e+001" Z="0.000000e+000" />
+                    <P2 X="1.000000e+001" Y="1.000000e+001" Z="0.000000e+000" />
+                </Box>
+            </Primitives>
+            <Weight X="1.000000e+000" Y="1.000000e+000" Z="1.000000e+000" />
+        </Excitation>
+        <DumpBox ID="1" Name="Et" Number="0" Type="0" Weight="1" StartTime="0" StopTime="0" DumpType="0" DumpMode="1" FileType="0" MultiGridLevel="0">
+            <FillColor R="155" G="225" B="192" a="255" />
+            <EdgeColor R="155" G="225" B="192" a="255" />
+            <Primitives>
+                <Box Priority="0">
+                    <P1 X="-1.000000e+001" Y="0.000000e+000" Z="-1.000000e+001" />
+                    <P2 X="1.000000e+001" Y="0.000000e+000" Z="3.000000e+001" />
+                </Box>
+            </Primitives>
+        </DumpBox>
+        <Metal ID="2" Name="???? 1">
+            <FillColor R="126" G="233" B="168" a="255" />
+            <EdgeColor R="126" G="233" B="168" a="255" />
+            <Primitives>
+                <Box Priority="0">
+                    <P1 X="0.000000e+000" Y="0.000000e+000" Z="0.000000e+000" />
+                    <P2 X="1.000000e+000" Y="1.000000e+000" Z="1.000000e+000" />
+                </Box>
+                <Box Priority="0">
+                    <P1 X="7.000000e+000" Y="7.000000e+000" Z="7.000000e+000" />
+                    <P2 X="8.000000e+000" Y="8.000000e+000" Z="8.000000e+000" />
+                </Box>
+            </Primitives>
+        </Metal>
+        <Metal ID="3" Name="Стол 2">
+            <FillColor R="154" G="167" B="134" a="255" />
+            <EdgeColor R="154" G="167" B="134" a="255" />
+            <Primitives>
+                <Box Priority="0">
+                    <P1 X="3.000000e+000" Y="3.000000e+000" Z="3.000000e+000" />
+                    <P2 X="5.000000e+000" Y="5.000000e+000" Z="5.000000e+000" />
+                </Box>
+            </Primitives>
+        </Metal>
+    </Properties>
+</ContinuousStructure>

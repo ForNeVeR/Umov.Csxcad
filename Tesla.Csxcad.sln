@@ -33,6 +33,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1F17
 		Scripts\Push-Package.ps1 = Scripts\Push-Package.ps1
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test-Data", "Test-Data", "{D12FF48C-241B-455C-9652-B1C7CFFB5E9C}"
+	ProjectSection(SolutionItems) = preProject
+		Test-Data\CSX.xml = Test-Data\CSX.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +59,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BE7E6A13-D2F4-4BE8-BA47-37B2C64403C8} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
 		{1F17EABE-71A6-4050-A4F9-2EBC2A4921DA} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
+		{D12FF48C-241B-455C-9652-B1C7CFFB5E9C} = {011A77A9-9930-45D6-812D-5637E61E5FB1}
 	EndGlobalSection
 EndGlobal
