@@ -35,7 +35,7 @@ let private makeFdtd (fdtd : Fdtd) =
               boundaryCond = makeBoundaryCond fdtd.BoundaryConditions)
 
 let private makeOpenEms (data : OpenEms) =
-    let structure = CsxWriter.makeContinuousStructure data.ContinousStructure
+    let structure = CsxWriter.makeContinuousStructure data.ContinuousStructure
     Xml.OpenEms (fdtd = makeFdtd data.Fdtd,
                  continuousStructure = structure)
 

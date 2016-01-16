@@ -67,4 +67,4 @@ type Fdtd =
 
 type OpenEms =
     { Fdtd : Fdtd
-      ContinousStructure : ContinuousStructure }
+      ContinuousStructure : ContinuousStructure }

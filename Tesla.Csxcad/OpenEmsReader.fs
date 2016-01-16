@@ -45,7 +45,7 @@ let private processOpenEms (openEms : Xml.OpenEms) =
     let fdtd = processFdtd openEms.Fdtd
     let cs = CsxReader.processContinuousStructure openEms.ContinuousStructure
     { Fdtd = fdtd
-      ContinousStructure = cs }
+      ContinuousStructure = cs }
 
 let Parse (stream : Stream) : OpenEms =
     let data = Xml.Load stream
