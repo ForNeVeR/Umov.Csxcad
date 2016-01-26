@@ -81,6 +81,7 @@
     <Compile Include="CsxWriter.fs" />
     <Compile Include="OpenEmsReader.fs" />
     <Compile Include="OpenEmsWriter.fs" />
+    <Compile Include="CsxcadFile.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

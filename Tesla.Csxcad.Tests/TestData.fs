@@ -2,11 +2,12 @@
 
 open System.IO
 
-let private SolutionRoot = Path.Combine ("..", "..", "..")
+let private solutionRoot = Path.Combine ("..", "..", "..")
 
-let Tools = Path.Combine (SolutionRoot, "Tools")
+let Tools = Path.Combine (solutionRoot, "Tools")
 let ``CSX.xml`` = Path.Combine (Tools, "CSX.xml")
 let ``openEMS.xml`` = Path.Combine (Tools, "openEMS.xml")
 
-let ``Test-Data`` = Path.Combine (SolutionRoot, "Test-Data")
+let ``Test-Data`` = Path.Combine (solutionRoot, "Test-Data")
 let ``Test-Data/CSX.xml`` = Path.Combine (``Test-Data``, "CSX.xml")
+let ``Test-Data/XML.xml`` = Path.Combine (``Test-Data``, "XML.xml")

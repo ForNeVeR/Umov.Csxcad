@@ -110,6 +110,7 @@
     <Compile Include="WriterTests.fs" />
     <Compile Include="ReaderTests.fs" />
     <Compile Include="UtilsTests.fs" />
+    <Compile Include="CxscadFileTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
