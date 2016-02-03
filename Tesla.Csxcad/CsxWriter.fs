@@ -7,10 +7,13 @@ open Tesla.Csxcad.Geometry
 open Tesla.Csxcad.Primitives
 open Tesla.Csxcad.Properties
 
-let private typedProperty<'t when 't :> Property> (properties : Property seq) =
+let private typedProperties<'t when 't :> Property> (properties : Property seq) =
     properties
     |> Seq.filter (fun p -> p :? 't)
     |> Seq.cast<'t>
+
+let private typedProperty<'t when 't :> Property> (properties : Property seq) =
+    typedProperties properties
     |> Seq.exactlyOne
 
 let private makeVector (v : Vector) = sprintf "%f,%f,%f" v.X v.Y v.Z
@@ -50,16 +53,20 @@ let private makeMetal (metal : Metal) =
     Xml.Metal (name = metal.Name,
                primitives = makePrimitives metal.Zone)
 
-let private makeProperties (properties : Property array) =
-    let excitation = makeExcitation (typedProperty<Excitation> properties)
-    let dumpBox = makeDumpBox (typedProperty<DumpBox> properties)
+let private makeProperties (properties : Property []) =
+    let dumpBox = makeDumpBox (typedProperty properties)
+    let excitations =
+        typedProperties properties
+        |> Seq.map makeExcitation
+        |> Seq.toArray
+
     let metals =
         properties
         |> Seq.filter (fun p -> not (p :? Excitation || p :? DumpBox))
         |> Seq.cast<Metal>
         |> Seq.map makeMetal
         |> Seq.toArray
-    Xml.Properties (excitation = excitation, dumpBox = dumpBox, metals = metals)
+    Xml.Properties (excitations = excitations, dumpBox = dumpBox, metals = metals)
 
 let private makeGridLines lines =
     lines

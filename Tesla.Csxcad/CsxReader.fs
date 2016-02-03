@@ -61,7 +61,7 @@ let private processMetal (metal : Xml.Metal) : Property =
 
 let private processProperties (properties : Xml.Properties) =
     [ Seq.singleton <| processDumpBox properties.DumpBox
-      Seq.singleton <| processExcitation properties.Excitation
+      Seq.map processExcitation properties.Excitations
       Seq.map processMetal properties.Metals ]
     |> Seq.concat
     |> Seq.toArray

@@ -24,11 +24,15 @@ mesh.y = -10:10;
 mesh.z = -10:30;
 CSX = DefineRectGrid(CSX, 1, mesh);
 
-CSX = AddExcitation(CSX, 'excitation', 0, [0 1 0]);
-CSX = AddBox(CSX, 'excitation', 0, [-10 -10 0], [10 10 0]);
+CSX = AddExcitation(CSX, 'ex-1', 0, [0 1 0]);
+CSX = AddBox(CSX, 'ex-1', 0, [-10 -10 0], [10 10 0]);
+
+CSX = AddExcitation(CSX, 'ex-2', 0, [0 1 0]);
+CSX = AddBox(CSX, 'ex-2', 0, [-10 -10 7], [10 10 7]);
 
 CSX = AddDump(CSX, 'Et');
 CSX = AddBox(CSX, 'Et', 0, [-10 0 -10], [10 0 30]);
+CSX = AddBox(CSX, 'Et', 0, [-5 5 -5], [5 5 5]);
 
 CSX = AddMetal(CSX, 'Object 1');
 CSX = AddMetal(CSX, 'Object 2');

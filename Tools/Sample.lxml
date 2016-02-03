@@ -1,11 +1,21 @@
 <ContinuousStructure CoordSystem="0">
   <Properties>
-    <Excitation Name="excitation" Type="0" Excite="0,1,0">
+    <Excitation Name="ex-1" Type="0" Excite="0,1,0">
       <Primitives>
         <Box Priority="0">
           <P1 X="-10" Y="-10" Z="0">
           </P1>
           <P2 X="10" Y="10" Z="0">
+          </P2>
+        </Box>
+      </Primitives>
+    </Excitation>
+    <Excitation Name="ex-2" Type="0" Excite="0,1,0">
+      <Primitives>
+        <Box Priority="0">
+          <P1 X="-10" Y="-10" Z="7">
+          </P1>
+          <P2 X="10" Y="10" Z="7">
           </P2>
         </Box>
       </Primitives>
@@ -16,6 +26,12 @@
           <P1 X="-10" Y="0" Z="-10">
           </P1>
           <P2 X="10" Y="0" Z="30">
+          </P2>
+        </Box>
+        <Box Priority="0">
+          <P1 X="-5" Y="5" Z="-5">
+          </P1>
+          <P2 X="5" Y="5" Z="5">
           </P2>
         </Box>
       </Primitives>
@@ -62,12 +78,22 @@
   </FDTD>
   <ContinuousStructure CoordSystem="0">
     <Properties>
-      <Excitation Name="excitation" Type="0" Excite="0,1,0">
+      <Excitation Name="ex-1" Type="0" Excite="0,1,0">
         <Primitives>
           <Box Priority="0">
             <P1 X="-10" Y="-10" Z="0">
             </P1>
             <P2 X="10" Y="10" Z="0">
+            </P2>
+          </Box>
+        </Primitives>
+      </Excitation>
+      <Excitation Name="ex-2" Type="0" Excite="0,1,0">
+        <Primitives>
+          <Box Priority="0">
+            <P1 X="-10" Y="-10" Z="7">
+            </P1>
+            <P2 X="10" Y="10" Z="7">
             </P2>
           </Box>
         </Primitives>
@@ -78,6 +104,12 @@
             <P1 X="-10" Y="0" Z="-10">
             </P1>
             <P2 X="10" Y="0" Z="30">
+            </P2>
+          </Box>
+          <Box Priority="0">
+            <P1 X="-5" Y="5" Z="-5">
+            </P1>
+            <P2 X="5" Y="5" Z="5">
             </P2>
           </Box>
         </Primitives>
