@@ -4,6 +4,12 @@ Tesla.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status 
 This is a part of the [Tesla project][tesla] responsible for parsing and
 creating [CSXCAD][csxcad] and [openEMS][open-ems] files.
 
+Debug
+-----
+To debug the library source in Visual Studio using the PDB from the NuGet
+package, you need to enable source server support [as stated in GitLink
+manual][gitlink-manual].
+
 Build
 -----
 
@@ -19,8 +25,8 @@ Paket bootstrapper and call these commands automatically.
 
 Consult the script documentation to discover its parameters.
 
-Packaging
----------
+Package
+-------
 
 To build [Nuget][nuget] package for Tesla, use the script `Scripts/Package.ps1`.
 If you want to push this package to the Nuget feed, use
@@ -56,6 +62,7 @@ This software may be at the user's choice used under the terms of:
 [appveyor-build]: https://ci.appveyor.com/project/ForNeVeR/tesla-csxcad/branch/develop
 [csxcad]: https://github.com/thliebig/CSXCAD
 [fsharp-data-xml-provider]: http://fsharp.github.io/FSharp.Data/library/XmlProvider.html
+[gitlink-manual]: https://github.com/GitTools/GitLink#gitlink
 [nuget]: https://www.nuget.org/
 [nuget-tesla-csxcad]: https://www.nuget.org/packages/Tesla.Csxcad/
 [octave]: https://www.gnu.org/software/octave/
