@@ -2,6 +2,7 @@ source https://www.nuget.org/api/v2/
 framework >= net46
 
 nuget FSharp.Data 2.2.5
+nuget GitLink 2.2.0
 nuget xunit 2.1.0
 nuget xunit.abstractions 2.0.0
 nuget xunit.assert 2.1.0

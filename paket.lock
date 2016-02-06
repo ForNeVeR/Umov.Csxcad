@@ -1,8 +1,9 @@
 FRAMEWORK: >= NET46
 NUGET
-  remote: https://nuget.org/api/v2
+  remote: https://www.nuget.org/api/v2
   specs:
     FSharp.Data (2.2.5)
+    gitlink (2.2.0)
     xunit (2.1.0)
       xunit.assert (2.1.0)
       xunit.core (2.1.0)
