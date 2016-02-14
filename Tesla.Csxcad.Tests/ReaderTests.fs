@@ -21,10 +21,14 @@ let ``CsxReader should throw an exception on invalid file`` () =
                                              upcast CsxReader.Parse stream))
 
 [<Fact>]
+let ``CsxReader should read issue-16-test-data.cxs successfully`` () =
+    use stream = new FileStream(``Test-Data/issue-16-test-data.csx``, FileMode.Open, FileAccess.Read)
+    ignore (CsxReader.Parse stream)
+
+[<Fact>]
 let ``OpenEmsReader should read openEMS file`` () =
     use stream = new FileStream(``openEMS.xml``, FileMode.Open, FileAccess.Read)
     ignore (OpenEmsReader.Parse stream)
-    ()
 
 [<Fact>]
 let ``OpenEmsReader should throw an exception on invalid file`` () =
@@ -33,7 +37,6 @@ let ``OpenEmsReader should throw an exception on invalid file`` () =
                                              upcast OpenEmsReader.Parse stream))
 
 [<Fact>]
-let ``OpenEmdReader should read Test-Data/CSX.xml successfully`` () =
+let ``OpenEmsReader should read Test-Data/CSX.xml successfully`` () =
     use stream = new FileStream(``Test-Data/CSX.xml``, FileMode.Open, FileAccess.Read)
     ignore (CsxReader.Parse stream)
-    ()

@@ -1,6 +1,7 @@
 ﻿module Tesla.Csxcad.Utils
 
 open System
+open System.Linq
 
 let stringOption = function
     | "" -> None
@@ -21,3 +22,6 @@ let inline parseEnum (s : string) : 'TEnum =
     enum value
 
 let inline parseEnumOpt (s : string) = stringOption s |> Option.map parseEnum
+
+let ofType<'t> s =
+    Enumerable.OfType<'t> s

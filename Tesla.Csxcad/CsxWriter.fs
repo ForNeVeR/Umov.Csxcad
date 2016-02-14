@@ -7,6 +7,29 @@ open Tesla.Csxcad.Geometry
 open Tesla.Csxcad.Primitives
 open Tesla.Csxcad.Properties
 
+let private zeroVector = "0,0,0"
+let private identityVector = "1,1,1"
+
+let private defaultMaterialProperty =
+    Xml.Property (epsilon = identityVector,
+                  mue = identityVector,
+                  kappa = zeroVector,
+                  sigma = zeroVector,
+                  density = "0")
+
+let private defaultMaterialWeight =
+    Xml.Weight (epsilon = identityVector,
+                mue = identityVector,
+                kappa = identityVector,
+                sigma = identityVector,
+                density = "1")
+
+let private defaultFillColor =
+    Xml.FillColor (r = "41", g = "35", b = "190", a = "123")
+
+let private defaultEdgeColor =
+    Xml.EdgeColor (r = "41", g = "35", b = "190", a = "123")
+
 let private typedProperties<'t when 't :> Property> (properties : Property seq) =
     properties
     |> Seq.filter (fun p -> p :? 't)
@@ -14,7 +37,7 @@ let private typedProperties<'t when 't :> Property> (properties : Property seq) 
 
 let private typedProperty<'t when 't :> Property> (properties : Property seq) =
     typedProperties properties
-    |> Seq.exactlyOne
+    |> Seq.tryHead
 
 let private makeVector (v : Vector) = sprintf "%f,%f,%f" v.X v.Y v.Z
 
@@ -51,10 +74,23 @@ let private makeDumpBox (dumpBox : DumpBox) =
 
 let private makeMetal (metal : Metal) =
     Xml.Metal (name = metal.Name,
-               primitives = makePrimitives metal.Zone)
+               id = None,
+               primitives = makePrimitives metal.Zone,
+               fillColor = None,
+               edgeColor = None)
+
+let private makeMaterial (material : Material) =
+    Xml.Material (id = null,
+                  name = material.Name,
+                  isotropy = "1",
+                  fillColor = defaultFillColor,
+                  edgeColor = defaultEdgeColor,
+                  primitives = makePrimitives material.Zone,
+                  property = defaultMaterialProperty,
+                  weight = defaultMaterialWeight)
 
 let private makeProperties (properties : Property []) =
-    let dumpBox = makeDumpBox (typedProperty properties)
+    let dumpBox = Option.map makeDumpBox (typedProperty properties)
     let excitations =
         typedProperties properties
         |> Seq.map makeExcitation
@@ -62,28 +98,41 @@ let private makeProperties (properties : Property []) =
 
     let metals =
         properties
-        |> Seq.filter (fun p -> not (p :? Excitation || p :? DumpBox))
-        |> Seq.cast<Metal>
+        |> Utils.ofType<Metal>
         |> Seq.map makeMetal
         |> Seq.toArray
-    Xml.Properties (excitations = excitations, dumpBox = dumpBox, metals = metals)
+    let materials =
+        properties
+        |> Utils.ofType<Material>
+        |> Seq.map makeMaterial
+        |> Seq.toArray
+    Xml.Properties (excitations = excitations,
+                    dumpBox = dumpBox,
+                    metals = metals,
+                    materials = materials)
 
 let private makeGridLines lines =
     lines
     |> Seq.map string
     |> String.concat ","
 
+let private makeXLines (lines : double[]) = Xml.XLines (qty = Some (string lines.Length), value = makeGridLines lines)
+let private makeYLines (lines : double[]) = Xml.YLines (qty = Some (string lines.Length), value = makeGridLines lines)
+let private makeZLines (lines : double[]) = Xml.ZLines (qty = Some (string lines.Length), value = makeGridLines lines)
+
 let private makeRectilinearGrid (grid : RectilinearGrid) =
     Xml.RectilinearGrid (deltaUnit = string grid.Delta,
-                         coordSystem = Utils.enumCode grid.CoordinateSystem,
-                         xLines = makeGridLines grid.XLines,
-                         yLines = makeGridLines grid.YLines,
-                         zLines = makeGridLines grid.ZLines)
+                         coordSystem = Some (Utils.enumCode grid.CoordinateSystem),
+                         xLines = makeXLines grid.XLines,
+                         yLines = makeYLines grid.YLines,
+                         zLines = makeZLines grid.ZLines)
 
 let internal makeContinuousStructure (cs : ContinuousStructure) =
     Xml.ContinuousStructure (coordSystem = Utils.enumCode cs.CoordinateSystem,
                              properties = makeProperties cs.Properties,
-                             rectilinearGrid = makeRectilinearGrid cs.Grid)
+                             rectilinearGrid = makeRectilinearGrid cs.Grid,
+                             backgroundMaterial = None,
+                             parameterSet = None)
 
 let Write (stream : Stream, cs : ContinuousStructure) : unit =
     let structure = makeContinuousStructure cs

@@ -65,3 +65,9 @@ type Metal(name : string,
     inherit Property(name, zone)
     override __.ToString () =
         base.ToString () + sprintf ".Metal{ }"
+
+type Material(name : string,
+              zone : Primitive array) =
+    inherit Property(name, zone)
+    override __.ToString () =
+        base.ToString () + sprintf ".Material{ }"

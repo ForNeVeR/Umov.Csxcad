@@ -1,5 +1,6 @@
 ﻿module Tesla.Csxcad.CsxReader
 
+open System
 open System.IO
 
 open Tesla.Csxcad.Base
@@ -60,22 +61,22 @@ let private processMetal (metal : Xml.Metal) : Property =
     upcast Metal (metal.Name, processPrimitives metal.Primitives)
 
 let private processProperties (properties : Xml.Properties) =
-    [ Seq.singleton <| processDumpBox properties.DumpBox
+    [ Seq.map processDumpBox (Option.toList properties.DumpBox)
       Seq.map processExcitation properties.Excitations
       Seq.map processMetal properties.Metals ]
     |> Seq.concat
     |> Seq.toArray
 
 let private processGridLines (lines : string) =
-    lines.Split ','
+    lines.Split ([| ',' |], StringSplitOptions.RemoveEmptyEntries)
     |> Array.map double
 
 let private processRectilinearGrid (grid : Xml.RectilinearGrid) =
     { Delta = double grid.DeltaUnit
-      CoordinateSystem = defaultArg (Utils.parseEnumOpt grid.CoordSystem) CoordinateSystem.Cartesian
-      XLines = processGridLines grid.XLines
-      YLines = processGridLines grid.YLines
-      ZLines = processGridLines grid.ZLines }
+      CoordinateSystem = defaultArg (Option.bind Utils.parseEnumOpt grid.CoordSystem) CoordinateSystem.Cartesian
+      XLines = processGridLines grid.XLines.Value
+      YLines = processGridLines grid.YLines.Value
+      ZLines = processGridLines grid.ZLines.Value }
 
 let internal processContinuousStructure (structure : Xml.ContinuousStructure)
                                         : ContinuousStructure =
