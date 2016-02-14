@@ -12,9 +12,9 @@ function copyWithoutHeader(sourceName, targetName, targetMode)
     fclose(output);
 end
 
-function concatXML (name1, name2, output)
-    copyWithoutHeader(name1, output, 'w');
-    copyWithoutHeader(name2, output, 'a');
+function concatXML (inputs, output)
+    copyWithoutHeader(inputs{1}, output, 'w');
+    cellfun(@(name) copyWithoutHeader(name, output, 'a'), inputs(2:end));
 end
 
 CSX = InitCSX();
@@ -49,4 +49,4 @@ FDTD = SetBoundaryCond(FDTD, {'PMC' 'PMC' 'PEC' 'PEC' 'MUR' 'MUR'});
 
 WriteOpenEMS('./openEMS.xml', FDTD, CSX);
 
-concatXML('./CSX.xml', './openEMS.xml', './Sample.lxml');
+concatXML({'./CSX.xml', './openEMS.xml', '../Test-Data/issue-16-test-data.csx'}, './Sample.lxml');
