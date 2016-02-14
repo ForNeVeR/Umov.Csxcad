@@ -60,10 +60,14 @@ let private processExcitation (excitation : Xml.Excitation) : Property =
 let private processMetal (metal : Xml.Metal) : Property =
     upcast Metal (metal.Name, processPrimitives metal.Primitives)
 
+let private processMaterial (material : Xml.Material) : Property =
+    upcast Material (material.Name, processPrimitives material.Primitives)
+
 let private processProperties (properties : Xml.Properties) =
     [ Seq.map processDumpBox (Option.toList properties.DumpBox)
       Seq.map processExcitation properties.Excitations
-      Seq.map processMetal properties.Metals ]
+      Seq.map processMetal properties.Metals
+      Seq.map processMaterial properties.Materials ]
     |> Seq.concat
     |> Seq.toArray
 

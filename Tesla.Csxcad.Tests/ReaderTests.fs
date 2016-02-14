@@ -6,6 +6,7 @@ open System.IO
 open Xunit
 
 open Tesla.Csxcad
+open Tesla.Csxcad.Properties
 open Tesla.Csxcad.Tests.TestData
 
 [<Fact>]
@@ -24,6 +25,17 @@ let ``CsxReader should throw an exception on invalid file`` () =
 let ``CsxReader should read issue-16-test-data.cxs successfully`` () =
     use stream = new FileStream(``Test-Data/issue-16-test-data.csx``, FileMode.Open, FileAccess.Read)
     ignore (CsxReader.Parse stream)
+
+[<Fact>]
+let ``CsxReader should read material list successfully`` () =
+    use stream = new FileStream(``Test-Data/issue-16-test-data.csx``, FileMode.Open, FileAccess.Read)
+    let structure = CsxReader.Parse stream
+    let materialCount =
+        structure.Properties
+        |> Utils.ofType<Material>
+        |> Seq.length
+
+    Assert.Equal (4, materialCount)
 
 [<Fact>]
 let ``OpenEmsReader should read openEMS file`` () =
