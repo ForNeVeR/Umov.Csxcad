@@ -36,6 +36,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test-Data", "Test-Data", "{D12FF48C-241B-455C-9652-B1C7CFFB5E9C}"
 	ProjectSection(SolutionItems) = preProject
 		Test-Data\CSX.xml = Test-Data\CSX.xml
+		Test-Data\issue-16-test-data.csx = Test-Data\issue-16-test-data.csx
 	EndProjectSection
 EndProject
 Global
