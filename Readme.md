@@ -1,4 +1,4 @@
-Tesla.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Umbra][status-umbra]][andivionian-status-classifier] [![Nuget Package][nuget-badge]][nuget-tesla-csxcad]
+Tesla.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Ventis][status-ventis]][andivionian-status-classifier] [![Nuget Package][nuget-badge]][nuget-tesla-csxcad]
 ============
 
 This is a part of the [Tesla project][tesla] responsible for parsing and
@@ -44,7 +44,7 @@ for [`XMLProvider`][fsharp-data-xml-provider]).
 Raw XML contents of `CSX.xml` and `openEMS.xml` are also used for the unit
 tests.
 
-﻿To generate these sample files, install Octave and openEMS, and run the attached
+To generate these sample files, install Octave and openEMS, and run the attached
 script file. For example:
 
     $ cd Tools
@@ -74,5 +74,5 @@ This software may be at the user's choice used under the terms of:
 
 [appveyor-build-status]: https://ci.appveyor.com/api/projects/status/hg2hjvmhwmiwf7q9/branch/develop?svg=true
 [nuget-badge]: https://img.shields.io/nuget/vpre/Tesla.Csxcad.svg
-[status-umbra]: https://img.shields.io/badge/status-umbra-red.svg
+[status-ventis]: https://img.shields.io/badge/status-ventis-yellow.svg
 [wtfpl-badge]: http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png
