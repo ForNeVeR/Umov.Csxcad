@@ -14,7 +14,7 @@
 .PARAMETER ProjectUrl
     GitHub URL for GitLink.
 .PARAMETER Configuration
-    Solutuion configuration that will be built and packed.
+    Solution configuration that will be built and packed.
 #>
 param (
     $msbuild = 'msbuild',
