@@ -5,6 +5,8 @@
     A directory where Paket binary should be downloaded.
 .PARAMETER PaketVersion
     A version of Paket bootstrapper binary to download.
+.PARAMETER PaketBootstrapperSha256Hash
+    A SHA-256 hash of Paket bootstrapper binary.
 #>
 param (
     [string] $Directory = "$PSScriptRoot/../.paket",
