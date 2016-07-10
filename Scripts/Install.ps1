@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Installs the dependencies for EmfPlatform build.
+    Installs the dependencies for Tesla.Csxcad build.
 .PARAMETER Directory
     A directory where Paket binary should be downloaded.
 .PARAMETER PaketVersion
