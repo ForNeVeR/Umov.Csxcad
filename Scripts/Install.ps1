@@ -29,8 +29,8 @@ if (-not (Test-Path $bootstrapper)) {
     Invoke-WebRequest $url -OutFile $bootstrapper
     $hash = (Get-FileHash $bootstrapper -Algorithm SHA256).Hash
     if ($hash -ne $PaketBootstrapperSha256Hash) {
-        throw "Invalid Paket bootstrapper hash. Expected $PaketBootstrapperSha256Hash, got $hash"
         Remove-Item $bootstrapper
+        throw "Invalid Paket bootstrapper hash. Expected $PaketBootstrapperSha256Hash, got $hash"
     }
 }
 
