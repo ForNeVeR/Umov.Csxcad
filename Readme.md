@@ -53,7 +53,7 @@ script file. For example:
 Licensing
 ---------
 
-Copyright © 2015–2016 Friedrich von Never <friedrich@fornever.me>
+Copyright © 2015–2017 Friedrich von Never <friedrich@fornever.me>
 
 This software may be at the user's choice used under the terms of:
 - WTFPL (see `WTFPL.md` for details) [![WTFPL][wtfpl-badge]][wtfpl]
