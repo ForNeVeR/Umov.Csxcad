@@ -1,7 +1,7 @@
-Umov.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Ventis][status-ventis]][andivionian-status-classifier] [![Nuget Package][nuget-badge]][nuget-Umov-csxcad]
+﻿Umov.Csxcad [![Build status][appveyor-build-status]][appveyor-build] [![Status Ventis][status-ventis]][andivionian-status-classifier] [![Nuget Package][nuget-badge]][nuget-umov-csxcad]
 ============
 
-This is a part of the [Umov project][Umov] responsible for parsing and
+This is a part of the [Umov project][umov] responsible for parsing and
 creating [CSXCAD][csxcad] and [openEMS][open-ems] files.
 
 Debug
@@ -60,16 +60,16 @@ This software may be at the user's choice used under the terms of:
 - MIT (see `MIT.md` for details)
 
 [andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier
-[appveyor-build]: https://ci.appveyor.com/project/ForNeVeR/Umov-csxcad/branch/develop
+[appveyor-build]: https://ci.appveyor.com/project/ForNeVeR/umov-csxcad/branch/develop
 [csxcad]: https://github.com/thliebig/CSXCAD
 [fsharp-data-xml-provider]: http://fsharp.github.io/FSharp.Data/library/XmlProvider.html
 [gitlink-manual]: https://github.com/GitTools/GitLink#gitlink
 [nuget]: https://www.nuget.org/
-[nuget-Umov-csxcad]: https://www.nuget.org/packages/Umov.Csxcad/
+[nuget-umov-csxcad]: https://www.nuget.org/packages/Umov.Csxcad/
 [octave]: https://www.gnu.org/software/octave/
 [open-ems]: http://openems.de/
 [paket]: https://fsprojects.github.io/Paket/index.html
-[Umov]: https://github.com/ForNeVeR/Umov
+[umov]: https://github.com/ForNeVeR/Umov
 [wtfpl]: http://www.wtfpl.net/
 
 [appveyor-build-status]: https://ci.appveyor.com/api/projects/status/hg2hjvmhwmiwf7q9/branch/develop?svg=true
