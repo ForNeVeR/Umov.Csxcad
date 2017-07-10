@@ -1,18 +1,18 @@
-FRAMEWORK: >= NET46
+RESTRICTION: >= net46
 NUGET
   remote: https://www.nuget.org/api/v2
-  specs:
+    FSharp.Core (4.0.0.1)
     FSharp.Data (2.2.5)
-    gitlink (2.2.0)
-    xunit (2.1.0)
-      xunit.assert (2.1.0)
-      xunit.core (2.1.0)
-    xunit.abstractions (2.0.0)
-    xunit.assert (2.1.0)
-    xunit.core (2.1.0)
-      xunit.extensibility.core (2.1.0)
-      xunit.extensibility.execution (2.1.0)
-    xunit.extensibility.core (2.1.0)
-      xunit.abstractions (2.0.0)
-    xunit.extensibility.execution (2.1.0)
-      xunit.extensibility.core (2.1.0)
+    gitlink (2.2)
+    xunit (2.1)
+      xunit.assert (2.1)
+      xunit.core (2.1)
+    xunit.abstractions (2.0)
+    xunit.assert (2.1)
+    xunit.core (2.1)
+      xunit.extensibility.core (2.1)
+      xunit.extensibility.execution (2.1)
+    xunit.extensibility.core (2.1)
+      xunit.abstractions (2.0)
+    xunit.extensibility.execution (2.1)
+      xunit.extensibility.core (2.1)

@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.CsxReader
+﻿module Umov.Csxcad.CsxReader
 
 open System
 open System.IO

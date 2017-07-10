@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.CsxcadFile
+﻿module Umov.Csxcad.CsxcadFile
 
 open System.IO
 

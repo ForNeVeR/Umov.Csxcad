@@ -1,4 +1,4 @@
-﻿namespace UmovCsxcad.Base
+﻿namespace Umov.Csxcad.Base
 
 open Umov.Csxcad.Properties
 

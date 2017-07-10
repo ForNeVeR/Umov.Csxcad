@@ -1,4 +1,4 @@
-﻿namespace UmovCsxcad.Geometry
+﻿namespace Umov.Csxcad.Geometry
 
 type Point =
     { X : double

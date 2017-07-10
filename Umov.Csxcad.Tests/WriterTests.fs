@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.Tests.WriterTests
+﻿module Umov.Csxcad.Tests.WriterTests
 
 open System.IO
 

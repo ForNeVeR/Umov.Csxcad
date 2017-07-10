@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.Tests.UtilsTests
+﻿module Umov.Csxcad.Tests.UtilsTests
 
 open System
 

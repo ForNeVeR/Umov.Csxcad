@@ -1,4 +1,4 @@
-﻿namespace UmovCsxcad
+﻿namespace Umov.Csxcad
 
 open FSharp.Data
 

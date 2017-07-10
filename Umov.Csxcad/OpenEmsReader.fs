@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.OpenEmsReader
+﻿module Umov.Csxcad.OpenEmsReader
 
 open System.IO
 open System.Text.RegularExpressions

@@ -1,4 +1,4 @@
-﻿namespace UmovCsxcad.AssemblyInfo
+﻿namespace Umov.Csxcad.AssemblyInfo
 
 open System.Reflection
 open System.Runtime.InteropServices

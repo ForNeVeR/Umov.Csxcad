@@ -1,4 +1,4 @@
-﻿namespace UmovCsxcad.Primitives
+﻿namespace Umov.Csxcad.Primitives
 
 open Umov.Csxcad.Geometry
 

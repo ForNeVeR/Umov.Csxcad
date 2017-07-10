@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.Utils
+﻿module Umov.Csxcad.Utils
 
 open System
 open System.Linq

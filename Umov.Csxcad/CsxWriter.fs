@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.CsxWriter
+﻿module Umov.Csxcad.CsxWriter
 
 open System.IO
 

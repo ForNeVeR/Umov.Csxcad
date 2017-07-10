@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.Tests.ReaderTests
+﻿module Umov.Csxcad.Tests.ReaderTests
 
 open System
 open System.IO

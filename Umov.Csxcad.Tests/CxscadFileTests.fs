@@ -1,4 +1,4 @@
-﻿module UmovCsxcad.Tests.CxscadFileTests
+﻿module Umov.Csxcad.Tests.CxscadFileTests
 
 open System.IO
 
