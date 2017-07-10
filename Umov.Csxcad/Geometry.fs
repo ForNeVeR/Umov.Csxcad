@@ -1,4 +1,4 @@
-﻿namespace Tesla.Csxcad.Geometry
+﻿namespace UmovCsxcad.Geometry
 
 type Point =
     { X : double

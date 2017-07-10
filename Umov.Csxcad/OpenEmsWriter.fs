@@ -1,8 +1,8 @@
-﻿module Tesla.Csxcad.OpenEmsWriter
+﻿module UmovCsxcad.OpenEmsWriter
 
 open System.IO
 
-open Tesla.Csxcad.Base
+open Umov.Csxcad.Base
 
 let makeExcitation (excitation : ExcitationMode) =
     // TODO: Write CutoffFrequency and ExcitationFunction also

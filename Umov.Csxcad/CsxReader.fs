@@ -1,12 +1,12 @@
-﻿module Tesla.Csxcad.CsxReader
+﻿module UmovCsxcad.CsxReader
 
 open System
 open System.IO
 
-open Tesla.Csxcad.Base
-open Tesla.Csxcad.Geometry
-open Tesla.Csxcad.Primitives
-open Tesla.Csxcad.Properties
+open Umov.Csxcad.Base
+open Umov.Csxcad.Geometry
+open Umov.Csxcad.Primitives
+open Umov.Csxcad.Properties
 
 let private processP1 (p1 : Xml.P) : Point =
     { X = double p1.X

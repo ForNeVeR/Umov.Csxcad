@@ -1,11 +1,11 @@
-﻿module Tesla.Csxcad.Tests.WriterTests
+﻿module UmovCsxcad.Tests.WriterTests
 
 open System.IO
 
 open Xunit
 
-open Tesla.Csxcad
-open Tesla.Csxcad.Tests.TestData
+open Umov.Csxcad
+open Umov.Csxcad.Tests.TestData
 
 let referenceStructure =
     use stream = new FileStream(``CSX.xml``, FileMode.Open, FileAccess.Read)

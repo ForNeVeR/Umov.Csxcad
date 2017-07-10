@@ -2,13 +2,13 @@
 
 <package>
     <metadata>
-        <id>Tesla.Csxcad</id>
+        <id>Umov.Csxcad</id>
         <version>$version$</version>
         <title>$title$</title>
         <authors>Friedrich von Never</authors>
         <owners>Friedrich von Never</owners>
-        <licenseUrl>https://github.com/ForNeVeR/Tesla.Csxcad#licensing</licenseUrl>
-        <projectUrl>https://github.com/ForNeVeR/Tesla.Csxcad</projectUrl>
+        <licenseUrl>https://github.com/ForNeVeR/Umov.Csxcad#licensing</licenseUrl>
+        <projectUrl>https://github.com/ForNeVeR/Umov.Csxcad</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Library to reading and write CXSCAD files.</description>
         <releaseNotes>Initial release.</releaseNotes>

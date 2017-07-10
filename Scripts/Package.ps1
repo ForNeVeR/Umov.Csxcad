@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Build the Tesla project and package it as a Nuget package.
+    Build the Umov project and package it as a Nuget package.
 .PARAMETER msbuild
     Path to the MSBuild executable.
 .PARAMETER nuget
@@ -20,9 +20,9 @@ param (
     $msbuild = 'msbuild',
     $nuget = 'nuget',
     $GitLink = "$PSScriptRoot/../packages/gitlink/lib/net45/GitLink.exe",
-    $Solution = "$PSScriptRoot/../Tesla.Csxcad.sln",
-    $Project = "$PSScriptRoot/../Tesla.Csxcad/Tesla.Csxcad.fsproj",
-    $ProjectUrl = 'https://github.com/ForNeVeR/Tesla.Csxcad',
+    $Solution = "$PSScriptRoot/../Umov.Csxcad.sln",
+    $Project = "$PSScriptRoot/../Umov.Csxcad/Umov.Csxcad.fsproj",
+    $ProjectUrl = 'https://github.com/ForNeVeR/Umov.Csxcad',
     $Configuration = 'Release'
 )
 

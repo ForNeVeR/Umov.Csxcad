@@ -1,6 +1,6 @@
-﻿namespace Tesla.Csxcad.Primitives
+﻿namespace UmovCsxcad.Primitives
 
-open Tesla.Csxcad.Geometry
+open Umov.Csxcad.Geometry
 
 [<AbstractClass>]
 type Primitive(priority : int) =

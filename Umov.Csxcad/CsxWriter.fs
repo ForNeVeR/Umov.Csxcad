@@ -1,11 +1,11 @@
-﻿module Tesla.Csxcad.CsxWriter
+﻿module UmovCsxcad.CsxWriter
 
 open System.IO
 
-open Tesla.Csxcad.Base
-open Tesla.Csxcad.Geometry
-open Tesla.Csxcad.Primitives
-open Tesla.Csxcad.Properties
+open Umov.Csxcad.Base
+open Umov.Csxcad.Geometry
+open Umov.Csxcad.Primitives
+open Umov.Csxcad.Properties
 
 let private zeroVector = "0,0,0"
 let private identityVector = "1,1,1"

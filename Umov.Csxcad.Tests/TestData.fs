@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.Tests.TestData
+﻿module UmovCsxcad.Tests.TestData
 
 open System.IO
 

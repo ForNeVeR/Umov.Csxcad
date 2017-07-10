@@ -1,13 +1,13 @@
-﻿module Tesla.Csxcad.Tests.ReaderTests
+﻿module UmovCsxcad.Tests.ReaderTests
 
 open System
 open System.IO
 
 open Xunit
 
-open Tesla.Csxcad
-open Tesla.Csxcad.Properties
-open Tesla.Csxcad.Tests.TestData
+open Umov.Csxcad
+open Umov.Csxcad.Properties
+open Umov.Csxcad.Tests.TestData
 
 [<Fact>]
 let ``CsxReader should read CSX file`` () =

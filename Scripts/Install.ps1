@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Installs the dependencies for Tesla.Csxcad build.
+    Installs the dependencies for Umov.Csxcad build.
 .PARAMETER Directory
     A directory where Paket binary should be downloaded.
 .PARAMETER PaketVersion

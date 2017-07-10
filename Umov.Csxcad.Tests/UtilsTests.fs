@@ -1,12 +1,12 @@
-﻿module Tesla.Csxcad.Tests.UtilsTests
+﻿module UmovCsxcad.Tests.UtilsTests
 
 open System
 
 open Xunit
 
-open Tesla.Csxcad
-open Tesla.Csxcad.Base
-open Tesla.Csxcad.Properties
+open Umov.Csxcad
+open Umov.Csxcad.Base
+open Umov.Csxcad.Properties
 
 [<Fact>]
 let ``Utils.stringOption should behave properly`` () =

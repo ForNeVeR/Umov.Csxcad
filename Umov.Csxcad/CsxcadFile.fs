@@ -1,4 +1,4 @@
-﻿module Tesla.Csxcad.CsxcadFile
+﻿module UmovCsxcad.CsxcadFile
 
 open System.IO
 

@@ -1,6 +1,6 @@
-﻿namespace Tesla.Csxcad.Base
+﻿namespace UmovCsxcad.Base
 
-open Tesla.Csxcad.Properties
+open Umov.Csxcad.Properties
 
 type CoordinateSystem =
     | Cartesian = 0

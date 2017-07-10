@@ -1,11 +1,11 @@
-﻿module Tesla.Csxcad.Tests.CxscadFileTests
+﻿module UmovCsxcad.Tests.CxscadFileTests
 
 open System.IO
 
 open Xunit
 
-open Tesla.Csxcad
-open Tesla.Csxcad.Tests.TestData
+open Umov.Csxcad
+open Umov.Csxcad.Tests.TestData
 
 [<Fact>]
 let ``CSXCAD file should be categorized as CSXCAD`` () =

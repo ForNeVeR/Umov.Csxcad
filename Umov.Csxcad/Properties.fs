@@ -1,7 +1,7 @@
-﻿namespace Tesla.Csxcad.Properties
+﻿namespace UmovCsxcad.Properties
 
-open Tesla.Csxcad.Geometry
-open Tesla.Csxcad.Primitives
+open Umov.Csxcad.Geometry
+open Umov.Csxcad.Primitives
 
 type ExcitationType =
     | SoftE = 0

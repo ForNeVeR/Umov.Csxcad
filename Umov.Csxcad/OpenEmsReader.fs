@@ -1,9 +1,9 @@
-﻿module Tesla.Csxcad.OpenEmsReader
+﻿module UmovCsxcad.OpenEmsReader
 
 open System.IO
 open System.Text.RegularExpressions
 
-open Tesla.Csxcad.Base
+open Umov.Csxcad.Base
 
 let private processExcitation (excitation : Xml.Excitation) =
     { Type = Utils.parseEnum excitation.Type

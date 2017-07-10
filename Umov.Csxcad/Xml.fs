@@ -1,4 +1,4 @@
-﻿namespace Tesla.Csxcad
+﻿namespace UmovCsxcad
 
 open FSharp.Data
 
