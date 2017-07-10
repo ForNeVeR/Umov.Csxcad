@@ -28,16 +28,19 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
+Write-Output "Package.ps1: starting msbuild"
 & $msbuild $Solution /m "/p:Configuration=$Configuration" /p:Platform="Any CPU"
 if (-not $?) {
     exit $LASTEXITCODE
 }
 
+Write-Output "Package.ps1: starting GitLink"
 & $GitLink . -u $ProjectUrl
 if (-not $?) {
     exit $LASTEXITCODE
 }
 
+Write-Output "Package.ps1: starting nuget"
 & $nuget `
     pack `
     $Project `

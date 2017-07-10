@@ -32,6 +32,9 @@ To build [Nuget][nuget] package for Umov, use the script `Scripts/Package.ps1`.
 If you want to push this package to the Nuget feed, use
 `Scripts/Push-Package.ps1`.
 
+⚠ Please make sure you have a recent version of NuGet installed (4.1 should be
+okay), e.g. by [installing it from Chocolatey][choco-nuget].
+
 Sample XML generation
 ---------------------
 
@@ -61,6 +64,7 @@ This software may be at the user's choice used under the terms of:
 
 [andivionian-status-classifier]: https://github.com/ForNeVeR/andivionian-status-classifier
 [appveyor-build]: https://ci.appveyor.com/project/ForNeVeR/umov-csxcad/branch/develop
+[choco-nuget]: https://chocolatey.org/packages/NuGet.CommandLine
 [csxcad]: https://github.com/thliebig/CSXCAD
 [fsharp-data-xml-provider]: http://fsharp.github.io/FSharp.Data/library/XmlProvider.html
 [gitlink-manual]: https://github.com/GitTools/GitLink#gitlink

@@ -15,6 +15,7 @@
         <copyright>Copyright © 2015-2017 Friedrich von Never friedrich@fornever.me</copyright>
         <tags>CSXCAD XML</tags>
         <dependencies>
+            <dependency id="FSharp.Core" version="4.0.0.1" />
             <dependency id="FSharp.Data" version="2.2.5" />
         </dependencies>
     </metadata>
